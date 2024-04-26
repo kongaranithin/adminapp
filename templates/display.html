@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+            background-color: hsl(324, 76%, 78%);
+        }
+        table:hover{
+            background-color: crimson;
+            color:aqua;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<table border="2" align="center">
+    <tr><th>pid</th><th>pname</th><th>pcost</th><th>pmfdt</th><th>pexpd</th></tr>
+    {% for rec in records %}
+    <tr><td>{{ rec.pid}}</td><td>{{ rec.pname}}</td><td>{{ rec.pcost}}</td><td>{{ rec.pmfdt}}</td><td>{{ rec.pexpdt}}</td></tr>
+    {%  endfor %}
+
+</table>
+</body>
+</html>
